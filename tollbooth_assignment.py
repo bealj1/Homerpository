@@ -1,4 +1,4 @@
-import string
+import string # provides a collection of common string operations and constants.
 import phantom_tollbooth
 
 def get_most_common_words(text):
@@ -14,7 +14,7 @@ def get_most_common_words(text):
     translator = str.maketrans('','', string.punctuation) 
     words = text.lower().translate(translator).split()
    
-    words= [word for word in words if word.isalpha() and word not in stop_words]#removes stop words
+    words= [word for word in words if word.isalpha() and word not in stop_words]# isalpha checks if all the characters in the given string are alphabetic and removes words
 
 # Counts how many times a word is said 
     word_freq = {} 
